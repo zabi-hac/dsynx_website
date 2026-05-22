@@ -1,82 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" class="dark" data-page="careers"
   data-page-title="Careers — DSYNZ"
-  data-page-description="Join DSYNZ — build world-class software, AI, and design with a strategy-led technology team."
+  data-page-description="Join DSYNZ — senior strategists, designers, and engineers building category-defining technology."
   data-page-url="https://dsynz.com/careers.html">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers — DSYNZ</title>
-  <meta name="description" content="Join DSYNZ — build world-class software, AI, and design with a strategy-led technology team." />
+  <meta name="description" content="Careers at DSYNZ — build elite software, AI, and design." />
   <link rel="canonical" href="https://dsynz.com/careers.html" />
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="assets/js/theme-init.js"></script>
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css?v=3" />
+  <link rel="stylesheet" href="assets/css/dsynz-elite.css?v=3" />
 </head>
-<body>
+<body class="dsynz-app">
+  <div class="site-noise" aria-hidden="true"></div>
   <div id="site-loader"></div>
   <div id="site-nav"></div>
-  <main id="main" class="pt-[var(--nav-height)]">
-    <section class="section-padding">
-      <div class="container-narrow">
-        <p class="eyebrow reveal">Careers</p>
-        <h1 class="heading-display mt-4 text-[var(--color-text)] reveal">Build what others only pitch</h1>
-        <p class="mt-6 text-xl text-muted reveal">We hire craftspeople — strategists, designers, and engineers who care about outcomes as much as craft.</p>
-      </div>
-    </section>
-    <section class="section-padding pt-0">
+  <main id="main">
+    <div id="page-hero"></div>
+    <section class="section-editorial">
       <div class="container-narrow space-y-6">
-        <article class="card-hover reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 class="text-lg font-semibold text-[var(--color-text)]">Senior Full-Stack Engineer</h2>
-            <p class="text-sm text-muted">Remote · Full-time</p>
-          </div>
-          <a href="contact.html" class="btn-secondary !text-xs">Apply</a>
+        <article class="card-premium reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div><h2 class="text-lg font-semibold">Senior Full-Stack Engineer</h2><p class="text-sm text-muted">Remote · Full-time</p></div>
+          <a href="mailto:careers@dsynz.com" class="btn-secondary btn-magnetic shrink-0" data-magnetic>Apply</a>
         </article>
-        <article class="card-hover reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 class="text-lg font-semibold text-[var(--color-text)]">Product Designer (UI/UX)</h2>
-            <p class="text-sm text-muted">Remote · Full-time</p>
-          </div>
-          <a href="contact.html" class="btn-secondary !text-xs">Apply</a>
+        <article class="card-premium reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div><h2 class="text-lg font-semibold">Lead Product Designer</h2><p class="text-sm text-muted">Hybrid · Full-time</p></div>
+          <a href="mailto:careers@dsynz.com" class="btn-secondary btn-magnetic shrink-0" data-magnetic>Apply</a>
         </article>
-        <article class="card-hover reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 class="text-lg font-semibold text-[var(--color-text)]">AI/ML Engineer</h2>
-            <p class="text-sm text-muted">Remote · Full-time</p>
-          </div>
-          <a href="contact.html" class="btn-secondary !text-xs">Apply</a>
+        <article class="card-premium reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div><h2 class="text-lg font-semibold">AI / ML Engineer</h2><p class="text-sm text-muted">Remote · Full-time</p></div>
+          <a href="mailto:careers@dsynz.com" class="btn-secondary btn-magnetic shrink-0" data-magnetic>Apply</a>
         </article>
-        <article class="card-hover reveal flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 class="text-lg font-semibold text-[var(--color-text)]">Technical Project Lead</h2>
-            <p class="text-sm text-muted">Hybrid · Full-time</p>
-          </div>
-          <a href="contact.html" class="btn-secondary !text-xs">Apply</a>
-        </article>
-      </div>
-    </section>
-    <section class="section-padding bg-[var(--color-bg-elevated)]">
-      <div class="container-narrow reveal">
-        <h2 class="heading-section text-[var(--color-text)]">Life at DSYNZ</h2>
-        <ul class="mt-6 grid gap-4 sm:grid-cols-2 text-sm text-muted">
-          <li class="card">Competitive compensation & equity</li>
-          <li class="card">Remote-first with annual retreats</li>
-          <li class="card">Learning budget & conference travel</li>
-          <li class="card">Premium tools & hardware stipend</li>
-        </ul>
       </div>
     </section>
     <div id="site-cta"></div>
   </main>
   <div id="site-footer"></div>
-  <script type="module">
-    import { renderCTA } from './assets/js/components.js';
-    document.getElementById('site-cta').innerHTML = renderCTA({ title: 'Don\'t see your role?', subtitle: 'We are always meeting exceptional people. Introduce yourself.', primaryLabel: 'Get in touch', primaryHref: 'contact.html' });
-  </script>
+  <script type="module" src="assets/js/pages.js"></script>
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/animations.js"></script>
 </body>

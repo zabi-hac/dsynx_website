@@ -6,34 +6,28 @@
   <title>Page Not Found — DSYNZ</title>
   <meta name="robots" content="noindex, nofollow" />
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <script src="assets/js/theme-init.js"></script>
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css?v=3" />
+  <link rel="stylesheet" href="assets/css/dsynz-elite.css?v=3" />
 </head>
-<body>
+<body class="dsynz-app">
+  <div class="site-noise" aria-hidden="true"></div>
   <div id="site-loader"></div>
   <div id="site-nav"></div>
-  <main id="main" class="flex min-h-[calc(100vh-var(--nav-height))] items-center pt-[var(--nav-height)]">
-    <section class="container-narrow py-24 text-center">
-      <p class="font-display text-8xl text-brand md:text-9xl" aria-hidden="true">404</p>
-      <h1 class="heading-section mt-6 text-[var(--color-text)]">This page took a wrong turn</h1>
-      <p class="mt-4 text-lg text-muted">The resource you are looking for does not exist or has been moved.</p>
+  <main id="main" class="flex min-h-screen items-center">
+    <section class="container-narrow py-24 text-center w-full">
+      <p class="font-display text-[clamp(5rem,20vw,9rem)] leading-none text-brand/30" aria-hidden="true">404</p>
+      <h1 class="heading-section mt-6">Signal lost</h1>
+      <p class="mt-4 text-lead text-muted">This route does not exist in our architecture.</p>
       <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <a href="index.html" class="btn-primary">Back to home</a>
-        <a href="contact.html" class="btn-secondary">Contact us</a>
+        <a href="index.html" class="btn-primary btn-magnetic" data-magnetic>Return home</a>
+        <a href="contact.html" class="btn-secondary">Contact DSYNZ</a>
       </div>
-      <nav class="mt-12" aria-label="Helpful links">
-        <ul class="flex flex-wrap justify-center gap-6 text-sm text-muted">
-          <li><a href="services.html" class="hover:text-brand">Services</a></li>
-          <li><a href="projects.html" class="hover:text-brand">Projects</a></li>
-          <li><a href="blog.html" class="hover:text-brand">Insights</a></li>
-        </ul>
-      </nav>
     </section>
   </main>
   <div id="site-footer"></div>
   <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/animations.js"></script>
 </body>
 </html>

@@ -1,56 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" class="dark" data-page="services"
   data-page-title="Services — DSYNZ"
-  data-page-description="Custom software, AI solutions, UI/UX design, SaaS, cloud, automation, and digital transformation services."
+  data-page-description="Strategic technology services: custom software, AI, design, cloud, SaaS, and digital transformation for elite organizations."
   data-page-url="https://dsynz.com/services.html">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — DSYNZ</title>
-  <meta name="description" content="Custom software, AI solutions, UI/UX design, SaaS, cloud, automation, and digital transformation services." />
+  <meta name="description" content="Strategic technology services for organizations scaling and modernizing digitally." />
   <link rel="canonical" href="https://dsynz.com/services.html" />
   <meta property="og:title" content="Services — DSYNZ" />
   <meta property="og:url" content="https://dsynz.com/services.html" />
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="assets/js/theme-init.js"></script>
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css?v=3" />
+  <link rel="stylesheet" href="assets/css/dsynz-elite.css?v=3" />
 </head>
-<body>
+<body class="dsynz-app">
+  <div class="site-noise" aria-hidden="true"></div>
   <div id="site-loader"></div>
   <div id="site-nav"></div>
-  <main id="main" class="pt-[var(--nav-height)]">
-    <section class="section-padding pb-12">
-      <div class="container-narrow">
-        <p class="eyebrow reveal">Services</p>
-        <h1 class="heading-display mt-4 text-[var(--color-text)] reveal">Full-spectrum technology for ambitious growth</h1>
-        <p class="mt-6 text-xl text-muted reveal">From first prototype to enterprise scale — one partner accountable for strategy, design, engineering, and evolution.</p>
-      </div>
-    </section>
-    <section class="pb-28">
+  <main id="main">
+    <div id="page-hero"></div>
+    <section class="section-editorial">
       <div class="container-wide">
-        <div id="all-services" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
-      </div>
-    </section>
-    <section class="section-padding bg-[var(--color-bg-elevated)]">
-      <div class="container-narrow text-center reveal">
-        <h2 class="heading-section text-[var(--color-text)]">Not sure where to start?</h2>
-        <p class="mt-4 text-muted">Book a discovery session. We will map opportunities and recommend the highest-leverage path.</p>
-        <a href="contact.html" class="btn-primary mt-8 inline-flex">Book discovery</a>
+        <div id="all-services"></div>
       </div>
     </section>
     <div id="site-cta"></div>
   </main>
   <div id="site-footer"></div>
-  <script type="module">
-    import { renderServiceCard, renderCTA, SERVICES } from './assets/js/components.js';
-    document.getElementById('all-services').innerHTML = SERVICES.map((s, i) => renderServiceCard(s, i)).join('');
-    document.getElementById('site-cta').innerHTML = renderCTA();
-  </script>
+  <script type="module" src="assets/js/pages.js"></script>
   <script type="module" src="assets/js/main.js"></script>
   <script type="module" src="assets/js/animations.js"></script>
-  <script type="module" src="assets/js/forms.js"></script>
 </body>
 </html>

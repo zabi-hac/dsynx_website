@@ -3,13 +3,15 @@
  * Injects shared navigation, footer, CTA, newsletter, and contact form blocks.
  */
 
+import { BRAND } from './brand.js';
+
 const SITE = {
-  name: 'DSYNZ',
-  tagline: 'We design unbeatable businesses.',
-  descriptor: 'Strategy-led technology partner for growing businesses.',
-  email: 'hello@dsynz.com',
-  phone: '+1 (555) 000-0000',
-  baseUrl: typeof window !== 'undefined' ? window.location.origin : 'https://dsynz.com',
+  name: BRAND.name,
+  tagline: BRAND.tagline,
+  descriptor: BRAND.descriptor,
+  email: BRAND.email,
+  phone: BRAND.phone,
+  baseUrl: BRAND.baseUrl,
 };
 
 const NAV_LINKS = [
@@ -66,7 +68,7 @@ function isActive(href) {
 export function renderLogo(link = true) {
   const inner = `
     <span class="font-display text-xl tracking-tight text-[var(--color-text)]" aria-label="DSYNZ">DSYNZ</span>
-    <span class="hidden text-[10px] font-semibold uppercase tracking-[0.25em] text-muted sm:inline">Strategy ù Technology ù Growth</span>
+    <span class="hidden text-[10px] font-semibold uppercase tracking-[0.25em] text-muted xl:inline">Strategy ¬∑ Technology ¬∑ Growth</span>
   `;
   if (!link) return `<div class="flex flex-col gap-0.5">${inner}</div>`;
   return `<a href="index.html" class="group flex flex-col gap-0.5 focus:outline-none" aria-label="DSYNZ Home">${inner}</a>`;
@@ -85,10 +87,13 @@ export function renderNavbar() {
 
   return `
     <a href="#main" class="skip-link">Skip to main content</a>
-    <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" role="banner">
-      <nav class="nav-glass container-wide flex h-[var(--nav-height)] items-center justify-between" aria-label="Primary navigation">
-        ${renderLogo()}
-        <div class="hidden items-center gap-8 lg:flex">${links}</div>
+    <header id="site-header" class="site-header fixed top-0 left-0 right-0 z-[60] transition-all duration-500" role="banner">
+      <nav class="nav-glass container-wide flex min-h-[var(--nav-height)] items-center justify-between gap-4 py-3 lg:gap-8 lg:py-0" aria-label="Primary navigation">
+        <div class="flex items-center gap-3">
+          <span class="nav-mark hidden lg:block" aria-hidden="true"></span>
+          ${renderLogo()}
+        </div>
+        <div class="hidden items-center gap-9 lg:flex">${links}</div>
         <div class="flex items-center gap-3">
           <button type="button" id="theme-toggle" class="btn-ghost !px-3 !py-2" aria-label="Toggle dark mode">
             <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
@@ -205,7 +210,7 @@ export function renderNewsletter({ compact = false } = {}) {
   return `
     <form id="${id}" class="newsletter-form ${compact ? 'mt-6 max-w-sm' : 'mx-auto max-w-md'}" novalidate aria-label="Newsletter signup">
       ${compact ? '' : '<p class="eyebrow mb-2">Stay ahead</p>'}
-      ${compact ? '<label for="footer-email" class="sr-only">Email</label>' : '<h3 class="text-lg font-semibold text-[var(--color-text)]">Insights for growth leaders</h3><p class="mt-2 text-sm text-muted">Strategy, technology, and design ù delivered monthly.</p>'}
+      ${compact ? '<label for="footer-email" class="sr-only">Email</label>' : '<h3 class="text-lg font-semibold text-[var(--color-text)]">Insights for growth leaders</h3><p class="mt-2 text-sm text-muted">Strategy, technology, and design ÔøΩ delivered monthly.</p>'}
       <div class="mt-4 flex ${compact ? 'gap-2' : 'flex-col gap-3 sm:flex-row'}">
         <input type="email" id="${compact ? 'footer-email' : 'newsletter-email'}" name="email" required autocomplete="email" placeholder="you@company.com" class="input-field flex-1" aria-describedby="${id}-status" />
         <button type="submit" class="btn-primary ${compact ? '!px-4' : ''}">Subscribe</button>
@@ -275,7 +280,7 @@ const CASE_STUDIES = [
   {
     slug: 'novapay',
     industry: 'Fintech',
-    title: 'NovaPay ù Unified payments platform',
+    title: 'NovaPay ‚Äî Unified payments platform',
     desc: 'Enterprise-grade payment infrastructure rebuilt for latency, compliance, and global scale.',
     metric: '62%',
     metricLabel: 'latency reduction',
@@ -288,9 +293,9 @@ const CASE_STUDIES = [
   {
     slug: 'helix',
     industry: 'Healthcare',
-    title: 'Helix Health ù Patient experience',
+    title: 'Helix Health ‚Äî Patient experience',
     desc: 'HIPAA-aligned portal serving 200k+ patients with measurable engagement lift.',
-    metric: '3.2ù',
+    metric: '3.2√ó',
     metricLabel: 'portal adoption',
     stack: ['React', 'React Native', 'GCP'],
     before: 'Siloed patient data',
@@ -301,7 +306,7 @@ const CASE_STUDIES = [
   {
     slug: 'axiom',
     industry: 'AI / Enterprise',
-    title: 'Axiom AI ù Operations copilot',
+    title: 'Axiom AI ‚Äî Operations copilot',
     desc: 'Custom LLM workflows embedded in support ops with governance and observability.',
     metric: '40%',
     metricLabel: 'ticket automation',
@@ -317,21 +322,21 @@ const ENGAGEMENT_MODELS = [
   {
     name: 'Discovery Sprint',
     price: 'From $18k',
-    desc: 'Two-week strategic immersion ù opportunity map, technical audit, and prioritized roadmap.',
+    desc: 'Two-week strategic immersion ‚Äî opportunity map, technical audit, and prioritized roadmap.',
     features: ['Executive workshops', 'Architecture assessment', 'ROI modeling', 'Delivery blueprint'],
     featured: false,
   },
   {
     name: 'Strategic Partnership',
     price: 'Custom retainer',
-    desc: 'Embedded senior team aligned to your product and engineering leadership ù built for multi-year outcomes.',
+    desc: 'Embedded senior team aligned to your product and engineering leadership ‚Äî built for multi-year outcomes.',
     features: ['Dedicated squad', 'Quarterly strategy reviews', 'Continuous delivery', 'Executive reporting'],
     featured: true,
   },
   {
     name: 'Fixed Delivery',
     price: 'Scoped quote',
-    desc: 'Defined scope, milestones, and acceptance criteria ù ideal for platform builds and major releases.',
+    desc: 'Defined scope, milestones, and acceptance criteria ‚Äî ideal for platform builds and major releases.',
     features: ['Fixed timeline', 'Milestone billing', 'Quality gates', 'Knowledge transfer'],
     featured: false,
   },
@@ -340,11 +345,11 @@ const ENGAGEMENT_MODELS = [
 const FAQ_ITEMS = [
   {
     q: 'How does DSYNZ differ from a typical development agency?',
-    a: 'We lead with strategy and measurable business outcomes ù not feature lists. Senior architects and designers stay on your account from discovery through scale, with full transparency at every phase.',
+    a: 'We lead with strategy and measurable business outcomes ‚Äî not feature lists. Senior architects and designers stay on your account from discovery through scale, with full transparency at every phase.',
   },
   {
     q: 'What industries do you specialize in?',
-    a: 'We partner with growth-stage and enterprise teams in fintech, healthcare, SaaS, logistics, and retail ù wherever technology is a competitive moat, not a cost center.',
+    a: 'We partner with growth-stage and enterprise teams in fintech, healthcare, SaaS, logistics, and retail ‚Äî wherever technology is a competitive moat, not a cost center.',
   },
   {
     q: 'How do engagements typically begin?',
@@ -352,11 +357,11 @@ const FAQ_ITEMS = [
   },
   {
     q: 'Do you work with in-house engineering teams?',
-    a: 'Yes. We integrate with existing squads ù augmenting capability, establishing standards, and transferring knowledge so your team owns the platform long-term.',
+    a: 'Yes. We integrate with existing squads ‚Äî augmenting capability, establishing standards, and transferring knowledge so your team owns the platform long-term.',
   },
   {
     q: 'How do you ensure security and compliance?',
-    a: 'Security is embedded in architecture reviews, CI/CD, and delivery practices ù including HIPAA, SOC 2-aligned workflows, and enterprise access controls where required.',
+    a: 'Security is embedded in architecture reviews, CI/CD, and delivery practices ‚Äî including HIPAA, SOC 2-aligned workflows, and enterprise access controls where required.',
   },
 ];
 
@@ -465,7 +470,7 @@ export function renderTestimonialGrid() {
         </footer>
       </blockquote>
       <blockquote class="card-premium reveal flex flex-col justify-between" data-reveal data-stagger="2">
-        <p class="text-[var(--color-text)] leading-relaxed">"Premium in every interaction ù from discovery workshops to production launch."</p>
+        <p class="text-[var(--color-text)] leading-relaxed">"Premium in every interaction ÔøΩ from discovery workshops to production launch."</p>
         <footer class="mt-8 flex items-center gap-3">
           <div class="h-10 w-10 rounded-full bg-brand/15" aria-hidden="true"></div>
           <div><cite class="not-italic font-semibold text-sm">Elena Vasquez</cite><p class="text-xs text-muted">VP Product, Helix Health</p></div>
@@ -521,12 +526,14 @@ export function renderHeroVisual() {
 export function renderPageLoader() {
   return `
     <div id="page-loader" class="page-loader" aria-hidden="true">
-      <div class="flex flex-col items-center gap-4">
-        <span class="font-display text-3xl text-brand animate-pulse-soft">D</span>
-        <span class="text-xs uppercase tracking-[0.3em] text-muted">Loading</span>
+      <div class="loader-elite">
+        <span class="font-display text-4xl tracking-tight text-brand">D</span>
+        <div class="loader-elite-bar" aria-hidden="true"><span></span></div>
+        <span class="text-[10px] font-semibold uppercase tracking-[0.35em] text-muted">DSYNZ</span>
       </div>
     </div>
     <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
   `;
 }
 

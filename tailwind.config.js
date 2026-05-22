@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './*.html',
     './assets/js/**/*.js',
+    './assets/css/**/*.css',
     './components/**/*.html',
   ],
   darkMode: 'class',
@@ -28,7 +29,7 @@ module.exports = {
       },
       fontFamily: {
         display: ['"Archivo Black"', 'system-ui', 'sans-serif'],
-        body: ['Montserrat', 'system-ui', 'sans-serif'],
+        body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
       },
       spacing: {
         18: '4.5rem',
@@ -104,4 +105,28 @@ module.exports = {
     },
   },
   plugins: [],
+  /* Custom grid utilities in dsynz-elite.css use lg:col-* class names — must not purge */
+  safelist: [
+    'grid-12',
+    'col-12',
+    'col-6',
+    'col-4',
+    'col-5',
+    'col-7',
+    'col-8',
+    'md:col-3',
+    'md:col-6',
+    'lg:col-3',
+    'lg:col-4',
+    'lg:col-5',
+    'lg:col-6',
+    'lg:col-7',
+    'lg:col-8',
+    'lg:col-start-6',
+    'lg:col-start-7',
+    'lg:col-start-8',
+    'xl:col-5',
+    'xl:col-7',
+    'xl:col-start-8',
+  ],
 };

@@ -28,16 +28,60 @@ export function toggleTheme() {
 function initNavScroll() {
   const header = document.getElementById('site-header');
   if (!header) return;
-  const nav = header.querySelector('nav');
   const onScroll = () => {
-    if (window.scrollY > 24) {
-      nav?.classList.add('is-scrolled');
-    } else {
-      nav?.classList.remove('is-scrolled');
-    }
+    header.classList.toggle('is-scrolled', window.scrollY > 32);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+}
+
+function initAnchorScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      const id = anchor.getAttribute('href');
+      if (!id || id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      if (window.__dsynzLenis?.scrollTo) {
+        window.__dsynzLenis.scrollTo(target, { offset: -80 });
+      } else {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+}
+
+function initCursorDot() {
+  const dot = document.getElementById('cursor-dot');
+  if (!dot || window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let tx = 0;
+  let ty = 0;
+  let cx = 0;
+  let cy = 0;
+  const lerp = (a, b, t) => a + (b - a) * t;
+
+  const tick = () => {
+    cx = lerp(cx, tx, 0.18);
+    cy = lerp(cy, ty, 0.18);
+    dot.style.left = `${cx}px`;
+    dot.style.top = `${cy}px`;
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
+  document.addEventListener(
+    'mousemove',
+    (e) => {
+      tx = e.clientX;
+      ty = e.clientY;
+      dot.classList.add('is-active');
+    },
+    { passive: true }
+  );
+  document.addEventListener('mouseleave', () => dot.classList.remove('is-active'));
 }
 
 function initMobileMenu() {
@@ -160,6 +204,8 @@ export function initApp(options = {}) {
   initPageLoader();
   initLazyImages();
   initCursorGlow();
+  initCursorDot();
+  initAnchorScroll();
 
   const pageType = options.pageType || 'home';
   if (options.schema) {

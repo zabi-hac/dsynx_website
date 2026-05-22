@@ -22,11 +22,18 @@ Brand aligned with **DSYNZ Logo 2026.pdf**: primary `#7C3AED`, Archivo Black hea
 
 ```
 assets/
-  css/          input.css → main.css (Tailwind build)
-  js/           main, animations, components, forms, seo, home
+  css/          input.css + dsynz-elite.css → main.css
+  js/
+    brand.js        Positioning & structured copy
+    sections.js     Home + shared section renderers
+    components.js   Nav, footer, forms, cards
+    interactions.js Service stage, process, FAQ
+    animations.js   Lenis + GSAP motion
+    pages.js        Inner page bootstrap
+    home.js         Homepage mount
+    main.js, forms.js, seo.js
   favicon/      SVG favicon + web manifest
   images/       OG placeholder SVG
-components/     head-meta reference template
 robots.txt
 sitemap.xml
 ```
