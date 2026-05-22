@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DSYNZ — We Design Unbeatable Businesses</title>
   <meta name="description" content="Strategy-led technology partner for growing businesses. Custom software, AI solutions, UI/UX design, and digital transformation." />
-  <meta name="keywords" content="DSYNZ, software development, AI, UI UX, digital transformation, SaaS, cloud" />
+  <meta name="keywords" content="DSYNZ, software development, AI, UI UX, digital transformation, SaaS, cloud, enterprise technology" />
   <meta name="author" content="DSYNZ" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://dsynz.com/" />
@@ -31,244 +31,270 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
+  <div class="site-noise" aria-hidden="true"></div>
   <div id="site-loader"></div>
   <div id="site-nav"></div>
 
-  <main id="main" class="pt-[var(--nav-height)]">
+  <main id="main" class="relative z-[2] pt-[var(--nav-height)]">
     <!-- Hero -->
-    <section class="relative min-h-[92vh] overflow-hidden flex items-center" aria-labelledby="hero-heading">
+    <section class="hero-section relative flex items-center overflow-hidden" aria-labelledby="hero-heading" data-section>
       <div class="hero-mesh hero-mesh-animated" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
       <div class="absolute inset-0 bg-hero-gradient pointer-events-none" aria-hidden="true"></div>
-      <div class="container-wide relative z-10 py-20 md:py-28">
-        <div data-hero-title>
-          <p class="brand-pill reveal"><span>DSYNZ</span> Strategy · Technology · Growth</p>
-          <h1 id="hero-heading" class="heading-display mt-8 max-w-5xl text-[var(--color-text)]">
-            From clarity to <span class="text-gradient">growth</span>, we design technology that helps businesses become unbeatable.
-          </h1>
-          <p class="mt-6 max-w-2xl text-lg text-muted md:text-xl">
-            Strategy-led technology partner for growing businesses. Software, AI, design, and infrastructure — aligned to outcomes that matter.
-          </p>
-          <div class="mt-10 flex flex-wrap gap-4">
-            <a href="contact.html" class="btn-primary">Start a project</a>
-            <a href="projects.html" class="btn-secondary">View our work</a>
+      <div class="section-grid-overlay opacity-50" aria-hidden="true"></div>
+
+      <div class="container-wide relative z-10 py-16 md:py-24 lg:py-28">
+        <div class="grid items-center gap-16 lg:grid-cols-2 lg:gap-12 xl:gap-20">
+          <div data-hero-title>
+            <p class="brand-pill reveal" data-hero-line>
+              <span>DSYNZ</span> Strategy · Technology · Growth
+            </p>
+            <h1 id="hero-heading" class="heading-display mt-8 max-w-[14ch] text-balance text-[var(--color-text)]" data-hero-line>
+              From clarity to <span class="text-gradient">growth</span> — technology designed for market leadership.
+            </h1>
+            <p class="mt-8 max-w-xl text-lead text-muted reveal" data-hero-line>
+              We partner with ambitious organizations to architect software, AI, and digital systems that compound strategic advantage — not technical debt.
+            </p>
+            <div class="mt-10 flex flex-wrap items-center gap-4 reveal" data-hero-line>
+              <a href="contact.html" class="btn-primary btn-magnetic" data-magnetic>Start a project</a>
+              <a href="projects.html" class="btn-secondary btn-magnetic" data-magnetic>View case studies</a>
+            </div>
+            <dl class="mt-14 grid grid-cols-3 gap-6 border-t border-[var(--color-border)] pt-10 reveal" data-hero-line aria-label="Company highlights">
+              <div>
+                <dt class="sr-only">Years operating</dt>
+                <dd class="font-display text-2xl text-[var(--color-text)]">8+</dd>
+                <dd class="mt-1 text-xs text-muted">Years</dd>
+              </div>
+              <div>
+                <dt class="sr-only">Client retention</dt>
+                <dd class="font-display text-2xl text-[var(--color-text)]">98%</dd>
+                <dd class="mt-1 text-xs text-muted">Retention</dd>
+              </div>
+              <div>
+                <dt class="sr-only">Industries</dt>
+                <dd class="font-display text-2xl text-[var(--color-text)]">15+</dd>
+                <dd class="mt-1 text-xs text-muted">Industries</dd>
+              </div>
+            </dl>
           </div>
+          <div id="hero-visual-slot" class="reveal lg:order-last"></div>
         </div>
-        <p class="mt-16 font-display text-sm uppercase tracking-[0.2em] text-brand reveal">We design unbeatable businesses.</p>
+        <p class="mt-20 font-display text-[11px] uppercase tracking-[0.28em] text-brand/80 reveal" data-hero-line>
+          We design unbeatable businesses.
+        </p>
       </div>
     </section>
 
-    <!-- Trusted by / Stats -->
-    <section class="border-y border-[var(--color-border)] bg-[var(--color-bg-elevated)]" aria-labelledby="stats-heading">
-      <div class="container-wide py-16 md:py-20">
-        <p id="stats-heading" class="eyebrow text-center reveal">Trusted by ambitious teams</p>
-        <div class="mt-12 grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
-          <div class="text-center reveal">
-            <p class="stat-value" data-stat="120" data-suffix="+">0+</p>
-            <p class="mt-2 text-sm text-muted">Projects delivered</p>
+    <!-- Client logos -->
+    <div id="client-logos" role="region" aria-label="Trusted organizations"></div>
+
+    <!-- Metrics -->
+    <section class="section-padding-sm relative bg-[var(--color-bg-elevated)]" aria-labelledby="stats-heading" data-section>
+      <div class="section-grid-overlay" aria-hidden="true"></div>
+      <div class="container-wide relative z-10">
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-5 reveal">
+            <p id="stats-heading" class="eyebrow">Proof of execution</p>
+            <h2 class="heading-section mt-4 text-balance text-[var(--color-text)]">Outcomes measured in business terms</h2>
+            <p class="mt-5 text-lead text-muted max-w-md">Every engagement is instrumented against metrics that matter to leadership — not vanity dashboards.</p>
           </div>
-          <div class="text-center reveal">
-            <p class="stat-value" data-stat="98" data-suffix="%">0%</p>
-            <p class="mt-2 text-sm text-muted">Client retention</p>
+          <div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
+            <div class="stat-block reveal relative" data-stagger="0">
+              <p class="stat-value" data-stat="120" data-suffix="+">0+</p>
+              <p class="mt-2 text-sm text-muted">Projects delivered</p>
+              <span class="stat-divider" aria-hidden="true"></span>
+            </div>
+            <div class="stat-block reveal relative" data-stagger="1">
+              <p class="stat-value" data-stat="98" data-suffix="%">0%</p>
+              <p class="mt-2 text-sm text-muted">Client retention</p>
+              <span class="stat-divider" aria-hidden="true"></span>
+            </div>
+            <div class="stat-block reveal relative" data-stagger="2">
+              <p class="stat-value" data-stat="240" data-suffix="M+">0M+</p>
+              <p class="mt-2 text-sm text-muted">Transactions enabled</p>
+              <span class="stat-divider" aria-hidden="true"></span>
+            </div>
+            <div class="stat-block reveal" data-stagger="3">
+              <p class="stat-value" data-stat="15" data-suffix="+">0+</p>
+              <p class="mt-2 text-sm text-muted">Industries served</p>
+            </div>
           </div>
-          <div class="text-center reveal">
-            <p class="stat-value" data-stat="15" data-suffix="+">0+</p>
-            <p class="mt-2 text-sm text-muted">Industries served</p>
-          </div>
-          <div class="text-center reveal">
-            <p class="stat-value" data-stat="8" data-suffix="">0</p>
-            <p class="mt-2 text-sm text-muted">Years of excellence</p>
-          </div>
-        </div>
-        <div class="mt-16 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 opacity-60 reveal" aria-label="Client industries">
-          <span class="text-sm font-semibold tracking-widest text-muted">FINTECH</span>
-          <span class="text-sm font-semibold tracking-widest text-muted">HEALTH</span>
-          <span class="text-sm font-semibold tracking-widest text-muted">SAAS</span>
-          <span class="text-sm font-semibold tracking-widest text-muted">RETAIL</span>
-          <span class="text-sm font-semibold tracking-widest text-muted">LOGISTICS</span>
         </div>
       </div>
     </section>
 
     <!-- Services -->
-    <section class="section-padding" aria-labelledby="services-heading">
-      <div class="container-wide">
-        <div class="max-w-2xl reveal">
-          <p class="eyebrow">Capabilities</p>
-          <h2 id="services-heading" class="heading-section mt-3 text-[var(--color-text)]">Technology designed for strategic advantage</h2>
-          <p class="mt-4 text-lg text-muted">End-to-end expertise across product, engineering, design, and growth — delivered as one accountable partner.</p>
+    <section class="section-padding relative" aria-labelledby="services-heading" data-section>
+      <div class="section-glow" aria-hidden="true"></div>
+      <div class="container-wide relative z-10">
+        <div class="grid gap-10 lg:grid-cols-12 lg:items-end reveal">
+          <div class="lg:col-span-7">
+            <p class="eyebrow">Capabilities</p>
+            <h2 id="services-heading" class="heading-section mt-4 text-balance text-[var(--color-text)]">Technology architected for strategic advantage</h2>
+          </div>
+          <p class="lg:col-span-5 text-lead text-muted lg:text-right lg:max-w-md lg:ml-auto">
+            Product, engineering, design, and infrastructure — one accountable partner from discovery through scale.
+          </p>
         </div>
-        <div id="services-grid" class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
-        <div class="mt-12 text-center reveal">
-          <a href="services.html" class="btn-secondary">Explore all services</a>
+        <div id="services-track" class="services-track mt-16 lg:mt-20" role="list" aria-label="Service capabilities"></div>
+        <div class="mt-14 flex justify-center reveal">
+          <a href="services.html" class="btn-secondary btn-magnetic">Explore all capabilities</a>
         </div>
       </div>
     </section>
 
-    <!-- Why choose us -->
-    <section class="section-padding bg-[var(--color-bg-elevated)]" aria-labelledby="why-heading">
-      <div class="container-wide">
-        <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
-          <div class="reveal">
+    <!-- Why DSYNZ — asymmetrical -->
+    <section class="section-padding relative overflow-hidden bg-[var(--color-bg-elevated)]" aria-labelledby="why-heading" data-section>
+      <div class="section-grid-overlay" aria-hidden="true"></div>
+      <div class="container-wide relative z-10">
+        <div class="grid gap-16 lg:grid-cols-12 lg:gap-8">
+          <div class="lg:col-span-5 lg:sticky lg:top-32 lg:self-start reveal">
             <p class="eyebrow">Why DSYNZ</p>
-            <h2 id="why-heading" class="heading-section mt-3 text-[var(--color-text)]">Clarity first. Execution without compromise.</h2>
-            <p class="mt-4 text-lg text-muted">We combine strategy, design, and engineering in one motion — so your technology investments compound instead of fragment.</p>
+            <h2 id="why-heading" class="heading-section mt-4 text-[var(--color-text)]">Clarity first.<br />Execution without compromise.</h2>
+            <p class="mt-6 text-lead text-muted">We unify strategy, design, and engineering — so technology investments compound instead of fragment across vendors.</p>
+            <a href="about.html" class="btn-ghost mt-8 inline-flex !px-0">Our philosophy →</a>
           </div>
-          <ul class="space-y-6">
-            <li class="card reveal flex gap-5">
-              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/15 font-display text-brand">01</span>
+          <div class="lg:col-span-6 lg:col-start-7 space-y-5">
+            <article class="card-premium reveal flex gap-6 md:gap-8" data-stagger="0">
+              <span class="font-display text-4xl leading-none text-brand/40 md:text-5xl" aria-hidden="true">01</span>
               <div>
-                <h3 class="font-semibold text-[var(--color-text)]">Strategy before screens</h3>
-                <p class="mt-1 text-sm text-muted">Every build starts with business clarity — roadmaps, metrics, and technical decisions aligned to growth.</p>
+                <h3 class="text-xl font-semibold text-[var(--color-text)]">Strategy before screens</h3>
+                <p class="mt-3 text-muted leading-relaxed">Roadmaps, success metrics, and technical decisions aligned to growth — before a single sprint begins.</p>
               </div>
-            </li>
-            <li class="card reveal flex gap-5">
-              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/15 font-display text-brand">02</span>
+            </article>
+            <article class="card-premium reveal flex gap-6 md:gap-8 lg:translate-x-8" data-stagger="1">
+              <span class="font-display text-4xl leading-none text-brand/40 md:text-5xl" aria-hidden="true">02</span>
               <div>
-                <h3 class="font-semibold text-[var(--color-text)]">Senior-led delivery</h3>
-                <p class="mt-1 text-sm text-muted">Architects and designers who have shipped at scale — not handoffs to junior teams after the sale.</p>
+                <h3 class="text-xl font-semibold text-[var(--color-text)]">Senior-led delivery</h3>
+                <p class="mt-3 text-muted leading-relaxed">Architects and designers who have shipped at scale — embedded on your account, not handed off post-sale.</p>
               </div>
-            </li>
-            <li class="card reveal flex gap-5">
-              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand/15 font-display text-brand">03</span>
+            </article>
+            <article class="card-premium reveal flex gap-6 md:gap-8" data-stagger="2">
+              <span class="font-display text-4xl leading-none text-brand/40 md:text-5xl" aria-hidden="true">03</span>
               <div>
-                <h3 class="font-semibold text-[var(--color-text)]">Measurable outcomes</h3>
-                <p class="mt-1 text-sm text-muted">We define success in business terms — conversion, efficiency, retention — and instrument from day one.</p>
+                <h3 class="text-xl font-semibold text-[var(--color-text)]">Measurable outcomes</h3>
+                <p class="mt-3 text-muted leading-relaxed">Conversion, efficiency, retention — instrumented from day one and reported in language executives trust.</p>
               </div>
-            </li>
-          </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured projects -->
-    <section class="section-padding" aria-labelledby="projects-heading">
-      <div class="container-wide">
-        <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between reveal">
-          <div>
+    <!-- Case studies -->
+    <section class="section-padding relative" aria-labelledby="projects-heading" data-section>
+      <div class="section-glow" aria-hidden="true"></div>
+      <div class="container-wide relative z-10">
+        <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between reveal">
+          <div class="max-w-2xl">
             <p class="eyebrow">Selected work</p>
-            <h2 id="projects-heading" class="heading-section mt-3 text-[var(--color-text)]">Projects that move markets</h2>
+            <h2 id="projects-heading" class="heading-section mt-4 text-[var(--color-text)]">Case studies that move markets</h2>
+            <p class="mt-4 text-lead text-muted">Transformation stories with measurable before-and-after impact.</p>
           </div>
-          <a href="projects.html" class="btn-ghost">View all case studies →</a>
+          <a href="projects.html" class="btn-ghost shrink-0">All case studies →</a>
         </div>
-        <div class="mt-14 grid gap-8 lg:grid-cols-3">
-          <article class="card-hover reveal group lg:col-span-2">
-            <div class="aspect-[21/9] overflow-hidden rounded-xl bg-gradient-to-br from-brand/30 to-transparent">
-              <div class="flex h-full items-end p-8">
-                <span class="rounded-full bg-black/40 px-3 py-1 text-xs font-medium text-white backdrop-blur">Fintech</span>
-              </div>
-            </div>
-            <h3 class="mt-6 text-xl font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">NovaPay — Unified payments platform</h3>
-            <p class="mt-2 text-muted">Rebuilt core infrastructure and UX, reducing transaction latency by 62% and increasing enterprise adoption.</p>
-            <a href="projects.html" class="mt-4 inline-block text-sm font-semibold text-brand">Read case study</a>
-          </article>
-          <article class="card-hover reveal group">
-            <div class="aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br from-brand/20 to-[var(--color-bg)]"></div>
-            <h3 class="mt-6 text-lg font-semibold text-[var(--color-text)]">Helix Health — Patient portal</h3>
-            <p class="mt-2 text-sm text-muted">HIPAA-compliant mobile and web experience serving 200k+ patients.</p>
-          </article>
-          <article class="card-hover reveal group">
-            <div class="aspect-[4/3] overflow-hidden rounded-xl bg-gradient-to-br from-white/5 to-brand/10"></div>
-            <h3 class="mt-6 text-lg font-semibold text-[var(--color-text)]">Axiom AI — Operations copilot</h3>
-            <p class="mt-2 text-sm text-muted">Custom LLM workflows automating 40% of support volume.</p>
-          </article>
-        </div>
+        <div id="case-studies-grid" class="mt-16 grid gap-6 lg:grid-cols-12" role="list" aria-label="Featured case studies"></div>
       </div>
     </section>
 
-    <!-- Process timeline -->
-    <section class="section-padding bg-[var(--color-bg-elevated)]" aria-labelledby="process-heading">
-      <div class="container-narrow">
-        <div class="text-center reveal">
+    <!-- Process -->
+    <section class="section-padding relative bg-[var(--color-bg-elevated)]" aria-labelledby="process-heading" data-section>
+      <div class="container-wide relative z-10">
+        <div class="max-w-2xl reveal">
           <p class="eyebrow">How we work</p>
-          <h2 id="process-heading" class="heading-section mt-3 text-[var(--color-text)]">A process built for certainty</h2>
-          <p class="mx-auto mt-4 max-w-xl text-muted">Four phases. Zero ambiguity. Full transparency from discovery to scale.</p>
+          <h2 id="process-heading" class="heading-section mt-4 text-[var(--color-text)]">A process built for certainty</h2>
+          <p class="mt-5 text-lead text-muted">Four phases. Full transparency. Executive visibility from discovery through scale.</p>
         </div>
-        <div class="relative mt-16 space-y-12 md:space-y-0">
-          <div class="timeline-line hidden md:block" aria-hidden="true"></div>
-          <div class="grid gap-12 md:grid-cols-4" data-process-timeline>
-            <div class="reveal text-center md:text-left" data-timeline-item>
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand bg-[var(--color-bg)] font-display text-brand">1</span>
-              <h3 class="mt-4 font-semibold text-[var(--color-text)]">Discover</h3>
-              <p class="mt-2 text-sm text-muted">Stakeholder alignment, opportunity mapping, and technical audit.</p>
+        <div class="process-timeline mt-20">
+          <div class="process-connector" aria-hidden="true"></div>
+          <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8" data-process-timeline>
+            <div class="process-step reveal" data-timeline-item data-stagger="0">
+              <span class="process-step-num">1</span>
+              <h3 class="mt-6 text-lg font-semibold text-[var(--color-text)]">Discover</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted">Stakeholder alignment, opportunity mapping, technical audit, and success criteria definition.</p>
             </div>
-            <div class="reveal text-center md:text-left" data-timeline-item>
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand bg-[var(--color-bg)] font-display text-brand">2</span>
-              <h3 class="mt-4 font-semibold text-[var(--color-text)]">Design</h3>
-              <p class="mt-2 text-sm text-muted">Architecture, UX systems, and validated prototypes.</p>
+            <div class="process-step reveal" data-timeline-item data-stagger="1">
+              <span class="process-step-num">2</span>
+              <h3 class="mt-6 text-lg font-semibold text-[var(--color-text)]">Design</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted">Architecture, UX systems, and validated prototypes — de-risked before build investment.</p>
             </div>
-            <div class="reveal text-center md:text-left" data-timeline-item>
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand bg-[var(--color-bg)] font-display text-brand">3</span>
-              <h3 class="mt-4 font-semibold text-[var(--color-text)]">Build</h3>
-              <p class="mt-2 text-sm text-muted">Iterative engineering with continuous stakeholder visibility.</p>
+            <div class="process-step reveal" data-timeline-item data-stagger="2">
+              <span class="process-step-num">3</span>
+              <h3 class="mt-6 text-lg font-semibold text-[var(--color-text)]">Build</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted">Iterative engineering with continuous stakeholder visibility and quality gates.</p>
             </div>
-            <div class="reveal text-center md:text-left" data-timeline-item>
-              <span class="inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand bg-[var(--color-bg)] font-display text-brand">4</span>
-              <h3 class="mt-4 font-semibold text-[var(--color-text)]">Scale</h3>
-              <p class="mt-2 text-sm text-muted">Launch, optimize, and evolve with data-driven roadmaps.</p>
+            <div class="process-step reveal" data-timeline-item data-stagger="3">
+              <span class="process-step-num">4</span>
+              <h3 class="mt-6 text-lg font-semibold text-[var(--color-text)]">Scale</h3>
+              <p class="mt-3 text-sm leading-relaxed text-muted">Launch, optimize, and evolve with data-driven roadmaps and operational excellence.</p>
             </div>
           </div>
         </div>
-        <p class="mt-12 text-center reveal"><a href="process.html" class="text-sm font-semibold text-brand hover:underline">Full process overview →</a></p>
+        <p class="mt-14 reveal"><a href="process.html" class="text-sm font-semibold text-brand hover:underline">Full process overview →</a></p>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="section-padding" aria-labelledby="testimonials-heading">
-      <div class="container-wide">
-        <p class="eyebrow text-center reveal">Client voices</p>
-        <h2 id="testimonials-heading" class="heading-section mt-3 text-center text-[var(--color-text)] reveal">Trusted by leaders who demand excellence</h2>
-        <div class="mt-14 grid gap-8 md:grid-cols-3">
-          <blockquote class="card reveal">
-            <p class="text-[var(--color-text)]">"DSYNZ translated our product vision into a platform our enterprise clients actually adopt. The strategic rigor was as impressive as the engineering."</p>
-            <footer class="mt-6 flex items-center gap-4">
-              <div class="h-10 w-10 rounded-full bg-brand/20" aria-hidden="true"></div>
-              <div>
-                <cite class="not-italic font-semibold text-sm text-[var(--color-text)]">Sarah Chen</cite>
-                <p class="text-xs text-muted">CEO, NovaPay</p>
-              </div>
-            </footer>
-          </blockquote>
-          <blockquote class="card reveal">
-            <p class="text-[var(--color-text)]">"They don't just build features — they challenge assumptions and design for outcomes. Our AI initiative ROI exceeded projections in Q2."</p>
-            <footer class="mt-6 flex items-center gap-4">
-              <div class="h-10 w-10 rounded-full bg-brand/20" aria-hidden="true"></div>
-              <div>
-                <cite class="not-italic font-semibold text-sm text-[var(--color-text)]">Marcus Reid</cite>
-                <p class="text-xs text-muted">CTO, Axiom Labs</p>
-              </div>
-            </footer>
-          </blockquote>
-          <blockquote class="card reveal">
-            <p class="text-[var(--color-text)]">"Premium in every interaction — from discovery workshops to production launch. DSYNZ is our long-term technology partner."</p>
-            <footer class="mt-6 flex items-center gap-4">
-              <div class="h-10 w-10 rounded-full bg-brand/20" aria-hidden="true"></div>
-              <div>
-                <cite class="not-italic font-semibold text-sm text-[var(--color-text)]">Elena Vasquez</cite>
-                <p class="text-xs text-muted">VP Product, Helix Health</p>
-              </div>
-            </footer>
-          </blockquote>
+    <section class="section-padding relative" aria-labelledby="testimonials-heading" data-section>
+      <div class="section-glow" aria-hidden="true"></div>
+      <div class="container-wide relative z-10">
+        <div class="max-w-3xl reveal">
+          <p class="eyebrow">Client voices</p>
+          <h2 id="testimonials-heading" class="heading-section mt-4 text-[var(--color-text)]">Trusted by leaders who demand excellence</h2>
+        </div>
+        <div id="testimonials-grid" class="mt-16"></div>
+      </div>
+    </section>
+
+    <!-- Engagement models -->
+    <section class="section-padding relative bg-[var(--color-bg-elevated)]" aria-labelledby="engagement-heading" data-section>
+      <div class="section-grid-overlay" aria-hidden="true"></div>
+      <div class="container-wide relative z-10">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <p class="eyebrow">Engagement</p>
+          <h2 id="engagement-heading" class="heading-section mt-4 text-[var(--color-text)]">Models built for how you buy</h2>
+          <p class="mt-5 text-lead text-muted">Flexible structures — from focused discovery to long-term strategic partnership.</p>
+        </div>
+        <div id="engagement-grid" class="mt-16 grid gap-6 md:grid-cols-3" role="list" aria-label="Engagement models"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-padding relative" aria-labelledby="faq-heading" data-section>
+      <div class="container-narrow relative z-10">
+        <div class="grid gap-16 lg:grid-cols-12">
+          <div class="lg:col-span-4 reveal lg:sticky lg:top-32 lg:self-start">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-heading" class="heading-section mt-4 text-[var(--color-text)]">Questions leaders ask</h2>
+            <p class="mt-5 text-muted">Straight answers on how we work, who we serve, and what to expect.</p>
+            <a href="contact.html" class="btn-primary btn-magnetic mt-8">Talk to our team</a>
+          </div>
+          <div id="faq-list" class="lg:col-span-8" role="list" aria-label="Frequently asked questions"></div>
         </div>
       </div>
     </section>
 
-    <!-- Tech stack -->
-    <section class="border-y border-[var(--color-border)] py-16" aria-labelledby="tech-heading">
+    <!-- Tech ecosystem -->
+    <section class="section-padding-sm border-y border-[var(--color-border)]" aria-labelledby="tech-heading" data-section>
       <div class="container-wide">
-        <h2 id="tech-heading" class="sr-only">Technology stack</h2>
-        <p class="eyebrow text-center reveal">Technology ecosystem</p>
-        <div class="mt-10 flex flex-wrap justify-center gap-4 md:gap-6 reveal" role="list">
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">TypeScript</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">React</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">Node.js</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">Python</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">AWS</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">GCP</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">Kubernetes</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">OpenAI</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">Figma</span>
-          <span class="rounded-full border border-[var(--color-border)] px-5 py-2 text-sm font-medium text-muted" role="listitem">PostgreSQL</span>
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between reveal">
+          <div>
+            <h2 id="tech-heading" class="heading-section text-[var(--color-text)]">Technology ecosystem</h2>
+            <p class="mt-2 text-sm text-muted">Battle-tested stack — chosen for reliability, not trends.</p>
+          </div>
+        </div>
+        <div class="mt-10 flex flex-wrap justify-center gap-3 md:justify-start reveal" role="list" aria-label="Technologies">
+          <span class="tech-pill" role="listitem">TypeScript</span>
+          <span class="tech-pill" role="listitem">React</span>
+          <span class="tech-pill" role="listitem">Node.js</span>
+          <span class="tech-pill" role="listitem">Python</span>
+          <span class="tech-pill" role="listitem">AWS</span>
+          <span class="tech-pill" role="listitem">GCP</span>
+          <span class="tech-pill" role="listitem">Kubernetes</span>
+          <span class="tech-pill" role="listitem">OpenAI</span>
+          <span class="tech-pill" role="listitem">Figma</span>
+          <span class="tech-pill" role="listitem">PostgreSQL</span>
         </div>
       </div>
     </section>

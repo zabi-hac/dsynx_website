@@ -50,8 +50,8 @@ Open `http://localhost:3000` (or your port).
 ## Features
 
 - Sticky glass navbar, dark/light theme toggle
-- GSAP scroll reveals + stat counters
-- Cursor glow (desktop), page loader
+- Lenis smooth scrolling + GSAP ScrollTrigger (reveals, counters, stagger)
+- Magnetic CTAs, cursor glow (desktop), cinematic hero, page loader
 - Reusable components: nav, footer, CTA, forms, newsletter
 - Schema.org JSON-LD via `assets/js/seo.js`
 - SEO: semantic HTML, meta/OG tags, canonical URLs, sitemap, robots.txt

@@ -66,7 +66,7 @@ function isActive(href) {
 export function renderLogo(link = true) {
   const inner = `
     <span class="font-display text-xl tracking-tight text-[var(--color-text)]" aria-label="DSYNZ">DSYNZ</span>
-    <span class="hidden text-[10px] font-semibold uppercase tracking-[0.25em] text-muted sm:inline">Strategy ∑ Technology ∑ Growth</span>
+    <span class="hidden text-[10px] font-semibold uppercase tracking-[0.25em] text-muted sm:inline">Strategy ù Technology ù Growth</span>
   `;
   if (!link) return `<div class="flex flex-col gap-0.5">${inner}</div>`;
   return `<a href="index.html" class="group flex flex-col gap-0.5 focus:outline-none" aria-label="DSYNZ Home">${inner}</a>`;
@@ -94,7 +94,7 @@ export function renderNavbar() {
             <svg class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
             <svg class="h-5 w-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
           </button>
-          <a href="contact.html" class="btn-primary hidden !py-2.5 !text-xs sm:inline-flex">Start a project</a>
+          <a href="contact.html" class="btn-primary btn-magnetic hidden !py-2.5 !text-xs sm:inline-flex" data-magnetic>Start a project</a>
           <button type="button" id="mobile-menu-btn" class="btn-ghost !p-2 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" d="M3.75 9h16.5m-16.5 6.75h16.5"/></svg>
           </button>
@@ -177,16 +177,21 @@ export function renderCTA({
   secondaryLabel = 'See our process',
 } = {}) {
   return `
-    <section class="section-padding" aria-labelledby="cta-heading">
-      <div class="container-narrow">
-        <div class="relative overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-brand/20 via-[var(--color-bg-elevated)] to-[var(--color-bg)] p-10 md:p-16">
-          <div class="hero-mesh opacity-60" aria-hidden="true"></div>
-          <div class="relative z-10 max-w-2xl">
-            <h2 id="cta-heading" class="heading-section text-[var(--color-text)]">${title}</h2>
-            <p class="mt-4 text-lg text-muted">${subtitle}</p>
-            <div class="mt-8 flex flex-wrap gap-4">
-              <a href="${primaryHref}" class="btn-primary">${primaryLabel}</a>
-              <a href="${secondaryHref}" class="btn-secondary">${secondaryLabel}</a>
+    <section class="section-padding" aria-labelledby="cta-heading" data-section>
+      <div class="section-glow" aria-hidden="true"></div>
+      <div class="container-narrow relative z-10">
+        <div class="cta-premium reveal" data-reveal>
+          <div class="hero-mesh hero-mesh-animated" aria-hidden="true"></div>
+          <div class="section-grid-overlay rounded-[2rem]" aria-hidden="true"></div>
+          <div class="relative z-10 grid gap-10 lg:grid-cols-12 lg:items-end">
+            <div class="lg:col-span-8">
+              <p class="eyebrow">Partner with DSYNZ</p>
+              <h2 id="cta-heading" class="heading-section mt-4 text-balance text-[var(--color-text)]">${title}</h2>
+              <p class="mt-5 max-w-xl text-lead text-muted">${subtitle}</p>
+            </div>
+            <div class="flex flex-col gap-4 sm:flex-row lg:col-span-4 lg:flex-col lg:items-stretch">
+              <a href="${primaryHref}" class="btn-primary btn-magnetic">${primaryLabel}</a>
+              <a href="${secondaryHref}" class="btn-secondary btn-magnetic">${secondaryLabel}</a>
             </div>
           </div>
         </div>
@@ -200,7 +205,7 @@ export function renderNewsletter({ compact = false } = {}) {
   return `
     <form id="${id}" class="newsletter-form ${compact ? 'mt-6 max-w-sm' : 'mx-auto max-w-md'}" novalidate aria-label="Newsletter signup">
       ${compact ? '' : '<p class="eyebrow mb-2">Stay ahead</p>'}
-      ${compact ? '<label for="footer-email" class="sr-only">Email</label>' : '<h3 class="text-lg font-semibold text-[var(--color-text)]">Insights for growth leaders</h3><p class="mt-2 text-sm text-muted">Strategy, technology, and design ó delivered monthly.</p>'}
+      ${compact ? '<label for="footer-email" class="sr-only">Email</label>' : '<h3 class="text-lg font-semibold text-[var(--color-text)]">Insights for growth leaders</h3><p class="mt-2 text-sm text-muted">Strategy, technology, and design ù delivered monthly.</p>'}
       <div class="mt-4 flex ${compact ? 'gap-2' : 'flex-col gap-3 sm:flex-row'}">
         <input type="email" id="${compact ? 'footer-email' : 'newsletter-email'}" name="email" required autocomplete="email" placeholder="you@company.com" class="input-field flex-1" aria-describedby="${id}-status" />
         <button type="submit" class="btn-primary ${compact ? '!px-4' : ''}">Subscribe</button>
@@ -252,15 +257,264 @@ export function renderContactForm({ showTitle = true } = {}) {
 
 export function renderServiceCard(service, index = 0) {
   return `
-    <article class="card-hover reveal group" data-reveal style="transition-delay: ${index * 50}ms">
-      <div class="service-icon group-hover:bg-brand group-hover:text-white transition-colors">${svgIcon(service.icon)}</div>
-      <h3 class="mt-5 text-lg font-semibold text-[var(--color-text)]">${service.title}</h3>
-      <p class="mt-2 text-sm leading-relaxed text-muted">${service.desc}</p>
-      <a href="services.html" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand opacity-0 transition-all group-hover:opacity-100">
-        Learn more
-        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    <article class="service-card" data-stagger="${index}" role="listitem">
+      <div class="service-card-body">
+        <div class="service-icon">${svgIcon(service.icon, 'h-5 w-5')}</div>
+        <h3 class="service-card-title">${service.title}</h3>
+        <p class="service-card-desc">${service.desc}</p>
+      </div>
+      <a href="services.html" class="service-card-link">
+        Explore capabilities
+        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
       </a>
     </article>
+  `;
+}
+
+const CASE_STUDIES = [
+  {
+    slug: 'novapay',
+    industry: 'Fintech',
+    title: 'NovaPay ù Unified payments platform',
+    desc: 'Enterprise-grade payment infrastructure rebuilt for latency, compliance, and global scale.',
+    metric: '62%',
+    metricLabel: 'latency reduction',
+    stack: ['TypeScript', 'Node.js', 'AWS', 'PostgreSQL'],
+    before: 'Fragmented legacy rails',
+    after: 'Unified real-time core',
+    featured: true,
+    span: 8,
+  },
+  {
+    slug: 'helix',
+    industry: 'Healthcare',
+    title: 'Helix Health ù Patient experience',
+    desc: 'HIPAA-aligned portal serving 200k+ patients with measurable engagement lift.',
+    metric: '3.2ù',
+    metricLabel: 'portal adoption',
+    stack: ['React', 'React Native', 'GCP'],
+    before: 'Siloed patient data',
+    after: 'Connected care journey',
+    featured: false,
+    span: 4,
+  },
+  {
+    slug: 'axiom',
+    industry: 'AI / Enterprise',
+    title: 'Axiom AI ù Operations copilot',
+    desc: 'Custom LLM workflows embedded in support ops with governance and observability.',
+    metric: '40%',
+    metricLabel: 'ticket automation',
+    stack: ['Python', 'OpenAI', 'Kubernetes'],
+    before: 'Manual triage queues',
+    after: 'Intelligent resolution',
+    featured: false,
+    span: 4,
+  },
+];
+
+const ENGAGEMENT_MODELS = [
+  {
+    name: 'Discovery Sprint',
+    price: 'From $18k',
+    desc: 'Two-week strategic immersion ù opportunity map, technical audit, and prioritized roadmap.',
+    features: ['Executive workshops', 'Architecture assessment', 'ROI modeling', 'Delivery blueprint'],
+    featured: false,
+  },
+  {
+    name: 'Strategic Partnership',
+    price: 'Custom retainer',
+    desc: 'Embedded senior team aligned to your product and engineering leadership ù built for multi-year outcomes.',
+    features: ['Dedicated squad', 'Quarterly strategy reviews', 'Continuous delivery', 'Executive reporting'],
+    featured: true,
+  },
+  {
+    name: 'Fixed Delivery',
+    price: 'Scoped quote',
+    desc: 'Defined scope, milestones, and acceptance criteria ù ideal for platform builds and major releases.',
+    features: ['Fixed timeline', 'Milestone billing', 'Quality gates', 'Knowledge transfer'],
+    featured: false,
+  },
+];
+
+const FAQ_ITEMS = [
+  {
+    q: 'How does DSYNZ differ from a typical development agency?',
+    a: 'We lead with strategy and measurable business outcomes ù not feature lists. Senior architects and designers stay on your account from discovery through scale, with full transparency at every phase.',
+  },
+  {
+    q: 'What industries do you specialize in?',
+    a: 'We partner with growth-stage and enterprise teams in fintech, healthcare, SaaS, logistics, and retail ù wherever technology is a competitive moat, not a cost center.',
+  },
+  {
+    q: 'How do engagements typically begin?',
+    a: 'Most partnerships start with a Discovery Sprint or executive briefing. We align on goals, constraints, and success metrics before proposing a delivery model that fits your timeline and governance needs.',
+  },
+  {
+    q: 'Do you work with in-house engineering teams?',
+    a: 'Yes. We integrate with existing squads ù augmenting capability, establishing standards, and transferring knowledge so your team owns the platform long-term.',
+  },
+  {
+    q: 'How do you ensure security and compliance?',
+    a: 'Security is embedded in architecture reviews, CI/CD, and delivery practices ù including HIPAA, SOC 2-aligned workflows, and enterprise access controls where required.',
+  },
+];
+
+const CLIENT_LOGOS = [
+  'NOVAPAY', 'HELIX', 'AXIOM', 'MERIDIAN', 'VANTIS', 'ORBITAL', 'PRISM', 'NEXUS',
+];
+
+export function renderCaseStudyCard(project, index = 0) {
+  const col = project.featured ? 'lg:col-span-8' : 'lg:col-span-4';
+  const thumbAspect = project.featured ? 'aspect-[21/9]' : 'aspect-[16/11]';
+  return `
+    <article class="case-card ${col} group" data-stagger="${index}">
+      <a href="projects.html" class="block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand rounded-3xl">
+        <div class="case-thumb ${thumbAspect}">
+          <div class="case-thumb-bg" aria-hidden="true"></div>
+          <div class="absolute inset-0 flex items-end justify-between p-6 md:p-8">
+            <span class="rounded-full border border-white/10 bg-black/40 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white backdrop-blur-md">${project.industry}</span>
+            <div class="text-right">
+              <p class="case-metric">${project.metric}</p>
+              <p class="text-[10px] uppercase tracking-wider text-white/70">${project.metricLabel}</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 md:p-8">
+          <h3 class="text-xl font-semibold tracking-tight text-[var(--color-text)] transition-colors group-hover:text-brand md:text-2xl">${project.title}</h3>
+          <p class="mt-3 text-sm leading-relaxed text-muted">${project.desc}</p>
+          <div class="case-before-after mt-6" aria-label="Transformation">
+            <span>${project.before}</span>
+            <span class="is-after">${project.after}</span>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-2" role="list" aria-label="Technology stack">
+            ${project.stack.map((t) => `<span class="case-stack-tag" role="listitem">${t}</span>`).join('')}
+          </div>
+          <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand">
+            View case study
+            <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </span>
+        </div>
+      </a>
+    </article>
+  `;
+}
+
+export function renderEngagementCard(model, index = 0) {
+  return `
+    <article class="engagement-card ${model.featured ? 'is-featured' : ''}" data-stagger="${index}">
+      <div>
+        <p class="eyebrow">${model.featured ? 'Most selected' : 'Engagement'}</p>
+        <h3 class="mt-4 text-2xl font-semibold tracking-tight text-[var(--color-text)]">${model.name}</h3>
+        <p class="mt-2 font-display text-xl text-brand">${model.price}</p>
+        <p class="mt-4 text-sm leading-relaxed text-muted">${model.desc}</p>
+      </div>
+      <ul class="mt-8 space-y-3 border-t border-[var(--color-border)] pt-8">
+        ${model.features.map((f) => `<li class="flex items-start gap-3 text-sm text-muted"><svg class="mt-0.5 h-4 w-4 shrink-0 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>${f}</li>`).join('')}
+      </ul>
+      <a href="contact.html" class="btn-secondary btn-magnetic mt-10 w-full">Discuss this model</a>
+    </article>
+  `;
+}
+
+export function renderFAQ() {
+  return FAQ_ITEMS.map(
+    (item, i) => `
+    <div class="faq-item reveal" data-reveal data-faq-item>
+      <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-panel-${i}" id="faq-trigger-${i}">
+        <span>${item.q}</span>
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" d="M12 4.5v15m7.5-7.5h-15"/></svg>
+      </button>
+      <div class="faq-panel" id="faq-panel-${i}" role="region" aria-labelledby="faq-trigger-${i}">
+        <div class="faq-panel-inner"><p>${item.a}</p></div>
+      </div>
+    </div>`
+  ).join('');
+}
+
+export function renderLogoMarquee() {
+  const items = [...CLIENT_LOGOS, ...CLIENT_LOGOS]
+    .map((name) => `<span class="logo-item" aria-hidden="true">${name}</span>`)
+    .join('');
+  return `
+    <div class="logo-marquee-wrap overflow-hidden border-y border-[var(--color-border)] py-10" aria-label="Organizations we partner with">
+      <div class="logo-marquee">${items}</div>
+    </div>
+  `;
+}
+
+export function renderTestimonialGrid() {
+  return `
+    <div class="grid gap-6 lg:grid-cols-3 lg:grid-rows-2">
+      <blockquote class="testimonial-featured reveal" data-reveal>
+        <span class="testimonial-mark" aria-hidden="true">"</span>
+        <p class="testimonial-quote mt-4">DSYNZ translated our product vision into a platform our enterprise clients actually adopt. The strategic rigor was as impressive as the engineering.</p>
+        <footer class="mt-10 flex items-center gap-4 border-t border-[var(--color-border)] pt-8">
+          <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-brand/30 to-brand/5 font-display text-sm text-brand" aria-hidden="true">SC</div>
+          <div>
+            <cite class="not-italic font-semibold text-[var(--color-text)]">Sarah Chen</cite>
+            <p class="text-xs text-muted">CEO, NovaPay</p>
+          </div>
+        </footer>
+      </blockquote>
+      <blockquote class="card-premium reveal flex flex-col justify-between" data-reveal data-stagger="1">
+        <p class="text-[var(--color-text)] leading-relaxed">"They challenge assumptions and design for outcomes. Our AI initiative ROI exceeded projections in Q2."</p>
+        <footer class="mt-8 flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full bg-brand/15" aria-hidden="true"></div>
+          <div><cite class="not-italic font-semibold text-sm">Marcus Reid</cite><p class="text-xs text-muted">CTO, Axiom Labs</p></div>
+        </footer>
+      </blockquote>
+      <blockquote class="card-premium reveal flex flex-col justify-between" data-reveal data-stagger="2">
+        <p class="text-[var(--color-text)] leading-relaxed">"Premium in every interaction ù from discovery workshops to production launch."</p>
+        <footer class="mt-8 flex items-center gap-3">
+          <div class="h-10 w-10 rounded-full bg-brand/15" aria-hidden="true"></div>
+          <div><cite class="not-italic font-semibold text-sm">Elena Vasquez</cite><p class="text-xs text-muted">VP Product, Helix Health</p></div>
+        </footer>
+      </blockquote>
+      <blockquote class="card-glass reveal lg:col-span-2 flex items-center gap-6 md:gap-10" data-reveal data-stagger="3">
+        <p class="font-display text-4xl text-brand md:text-5xl" aria-hidden="true">98%</p>
+        <div>
+          <p class="text-lg font-medium text-[var(--color-text)]">Client retention across multi-year partnerships</p>
+          <p class="mt-1 text-sm text-muted">Measured across strategic and delivery engagements since 2018.</p>
+        </div>
+      </blockquote>
+    </div>
+  `;
+}
+
+export function renderHeroVisual() {
+  return `
+    <div class="hero-visual perspective-1000" aria-hidden="true" data-hero-visual>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-visual-inner">
+        <div class="hero-grid-fine absolute inset-0"></div>
+        <svg class="absolute inset-0 h-full w-full p-8" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="200" r="120" class="hero-line" stroke-dasharray="4 8" opacity="0.4"/>
+          <circle cx="200" cy="200" r="80" class="hero-line" opacity="0.6"/>
+          <path class="hero-line" d="M200 80 L200 320 M80 200 L320 200" opacity="0.25"/>
+          <path class="hero-line" d="M130 130 L270 270 M270 130 L130 270" opacity="0.2"/>
+          <circle cx="200" cy="120" r="6" fill="rgba(124,58,237,0.8)"/>
+          <circle cx="280" cy="200" r="5" fill="rgba(159,103,255,0.7)"/>
+          <circle cx="160" cy="260" r="5" fill="rgba(124,58,237,0.5)"/>
+          <circle cx="200" cy="200" r="14" fill="rgba(124,58,237,0.25)" stroke="rgba(124,58,237,0.6)" stroke-width="1"/>
+        </svg>
+        <div class="absolute bottom-6 left-6 right-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg)]/60 p-4 backdrop-blur-md">
+          <div class="flex justify-between text-[10px] uppercase tracking-widest text-muted">
+            <span>Systems</span><span class="text-brand">Operational</span>
+          </div>
+          <div class="mt-3 h-1.5 overflow-hidden rounded-full bg-[var(--color-border)]">
+            <div class="h-full w-[78%] rounded-full bg-gradient-to-r from-brand to-brand-light"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-badge hero-float-badge-1">
+        <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+        Strategy aligned
+      </div>
+      <div class="hero-float-badge hero-float-badge-2">
+        <span class="font-display text-brand">120+</span> deliveries
+      </div>
+    </div>
   `;
 }
 
@@ -276,4 +530,13 @@ export function renderPageLoader() {
   `;
 }
 
-export { SITE, SERVICES, svgIcon, NAV_LINKS };
+export {
+  SITE,
+  SERVICES,
+  svgIcon,
+  NAV_LINKS,
+  CASE_STUDIES,
+  ENGAGEMENT_MODELS,
+  FAQ_ITEMS,
+  CLIENT_LOGOS,
+};

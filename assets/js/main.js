@@ -98,15 +98,34 @@ function initLazyImages() {
 function initCursorGlow() {
   const glow = document.getElementById('cursor-glow');
   if (!glow || window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   let visible = false;
+  let targetX = 0;
+  let targetY = 0;
+  let currentX = 0;
+  let currentY = 0;
+
+  const lerp = (a, b, t) => a + (b - a) * t;
+
+  const tick = () => {
+    currentX = lerp(currentX, targetX, 0.12);
+    currentY = lerp(currentY, targetY, 0.12);
+    glow.style.left = `${currentX}px`;
+    glow.style.top = `${currentY}px`;
+    requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+
   document.addEventListener(
     'mousemove',
     (e) => {
-      glow.style.left = `${e.clientX}px`;
-      glow.style.top = `${e.clientY}px`;
+      targetX = e.clientX;
+      targetY = e.clientY;
       if (!visible) {
         glow.classList.add('is-active');
+        currentX = targetX;
+        currentY = targetY;
         visible = true;
       }
     },
