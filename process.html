@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-page="process"
+  data-page-title="Our Process — DSYNZ"
+  data-page-description="DSYNZ delivery process: Discover, Design, Build, and Scale — transparent, strategic, and outcome-driven."
+  data-page-url="https://dsynz.com/process.html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Process — DSYNZ</title>
+  <meta name="description" content="DSYNZ delivery process: Discover, Design, Build, and Scale — transparent, strategic, and outcome-driven." />
+  <link rel="canonical" href="https://dsynz.com/process.html" />
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div id="site-loader"></div>
+  <div id="site-nav"></div>
+  <main id="main" class="pt-[var(--nav-height)]">
+    <section class="section-padding">
+      <div class="container-narrow text-center">
+        <p class="eyebrow reveal">Process</p>
+        <h1 class="heading-display mt-4 text-[var(--color-text)] reveal">Precision at every phase</h1>
+        <p class="mt-6 text-xl text-muted reveal">A framework refined across hundreds of engagements — adaptable to your stage, rigorous in execution.</p>
+      </div>
+    </section>
+    <section class="section-padding pt-0">
+      <div class="container-narrow space-y-20">
+        <article class="reveal grid gap-8 md:grid-cols-12 md:items-start" data-timeline-item>
+          <span class="font-display text-6xl text-brand/30 md:col-span-2">01</span>
+          <div class="md:col-span-10">
+            <h2 class="heading-section text-[var(--color-text)]">Discover</h2>
+            <p class="mt-4 text-muted">We immerse in your business model, users, and constraints. Outputs include opportunity maps, technical audits, success metrics, and a prioritized roadmap.</p>
+            <ul class="mt-4 flex flex-wrap gap-2 text-xs font-medium text-muted">
+              <li class="rounded-full border border-[var(--color-border)] px-3 py-1">Stakeholder workshops</li>
+              <li class="rounded-full border border-[var(--color-border)] px-3 py-1">Competitive analysis</li>
+              <li class="rounded-full border border-[var(--color-border)] px-3 py-1">Architecture review</li>
+            </ul>
+          </div>
+        </article>
+        <article class="reveal grid gap-8 md:grid-cols-12" data-timeline-item>
+          <span class="font-display text-6xl text-brand/30 md:col-span-2">02</span>
+          <div class="md:col-span-10">
+            <h2 class="heading-section text-[var(--color-text)]">Design</h2>
+            <p class="mt-4 text-muted">Information architecture, design systems, and high-fidelity prototypes validated with real users before a single production commit.</p>
+          </div>
+        </article>
+        <article class="reveal grid gap-8 md:grid-cols-12" data-timeline-item>
+          <span class="font-display text-6xl text-brand/30 md:col-span-2">03</span>
+          <div class="md:col-span-10">
+            <h2 class="heading-section text-[var(--color-text)]">Build</h2>
+            <p class="mt-4 text-muted">Agile sprints with CI/CD, security-first development, and weekly demos. You see progress continuously — not at the end.</p>
+          </div>
+        </article>
+        <article class="reveal grid gap-8 md:grid-cols-12" data-timeline-item>
+          <span class="font-display text-6xl text-brand/30 md:col-span-2">04</span>
+          <div class="md:col-span-10">
+            <h2 class="heading-section text-[var(--color-text)]">Scale</h2>
+            <p class="mt-4 text-muted">Launch support, performance optimization, and evolution roadmaps driven by analytics — ensuring your investment compounds.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div id="site-cta"></div>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { renderCTA } from './assets/js/components.js';
+    document.getElementById('site-cta').innerHTML = renderCTA({ secondaryLabel: 'View services', secondaryHref: 'services.html' });
+  </script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/animations.js"></script>
+</body>
+</html>

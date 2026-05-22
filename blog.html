@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-page="blog"
+  data-page-title="Insights — DSYNZ Blog"
+  data-page-description="Strategy, technology, and design insights from DSYNZ — for leaders building unbeatable businesses."
+  data-page-url="https://dsynz.com/blog.html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights — DSYNZ</title>
+  <meta name="description" content="Strategy, technology, and design insights from DSYNZ — for leaders building unbeatable businesses." />
+  <link rel="canonical" href="https://dsynz.com/blog.html" />
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div id="site-loader"></div>
+  <div id="site-nav"></div>
+  <main id="main" class="pt-[var(--nav-height)]">
+    <section class="section-padding">
+      <div class="container-narrow">
+        <p class="eyebrow reveal">Insights</p>
+        <h1 class="heading-display mt-4 text-[var(--color-text)] reveal">Thinking for growth leaders</h1>
+        <p class="mt-6 text-xl text-muted reveal">Perspectives on strategy, product, AI, and the craft of building companies that last.</p>
+      </div>
+      <div class="container-wide mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <article class="card-hover reveal group">
+          <div class="blog-card-image bg-gradient-to-br from-brand/30 to-transparent" role="img" aria-label="Article cover"></div>
+          <time class="mt-4 block text-xs font-medium text-brand" datetime="2026-05-15">May 15, 2026</time>
+          <h2 class="mt-2 text-lg font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">
+            <a href="#">Why clarity beats speed in product strategy</a>
+          </h2>
+          <p class="mt-2 text-sm text-muted">The frameworks we use before writing a single line of code.</p>
+        </article>
+        <article class="card-hover reveal group">
+          <div class="blog-card-image bg-gradient-to-br from-brand/20 to-[var(--color-bg)]" role="img" aria-label="Article cover"></div>
+          <time class="mt-4 block text-xs font-medium text-brand" datetime="2026-04-28">April 28, 2026</time>
+          <h2 class="mt-2 text-lg font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">
+            <a href="#">AI ROI: measuring what matters in enterprise pilots</a>
+          </h2>
+          <p class="mt-2 text-sm text-muted">Beyond hype — instrumentation and governance that scale.</p>
+        </article>
+        <article class="card-hover reveal group">
+          <div class="blog-card-image bg-gradient-to-br from-white/5 to-brand/15" role="img" aria-label="Article cover"></div>
+          <time class="mt-4 block text-xs font-medium text-brand" datetime="2026-04-10">April 10, 2026</time>
+          <h2 class="mt-2 text-lg font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">
+            <a href="#">Design systems that survive hypergrowth</a>
+          </h2>
+          <p class="mt-2 text-sm text-muted">Lessons from scaling UX across distributed teams.</p>
+        </article>
+        <article class="card-hover reveal group">
+          <div class="blog-card-image bg-gradient-to-br from-brand/25 to-transparent" role="img" aria-label="Article cover"></div>
+          <time class="mt-4 block text-xs font-medium text-brand" datetime="2026-03-22">March 22, 2026</time>
+          <h2 class="mt-2 text-lg font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">
+            <a href="#">The modern CTO's guide to cloud economics</a>
+          </h2>
+          <p class="mt-2 text-sm text-muted">FinOps patterns that protect margin without sacrificing velocity.</p>
+        </article>
+        <article class="card-hover reveal group">
+          <div class="blog-card-image bg-gradient-to-br from-brand/15 to-black" role="img" aria-label="Article cover"></div>
+          <time class="mt-4 block text-xs font-medium text-brand" datetime="2026-03-05">March 5, 2026</time>
+          <h2 class="mt-2 text-lg font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">
+            <a href="#">When to build vs. buy in SaaS architecture</a>
+          </h2>
+          <p class="mt-2 text-sm text-muted">A decision matrix used across our portfolio companies.</p>
+        </article>
+        <article class="card-hover reveal group">
+          <div class="blog-card-image bg-gradient-to-br from-brand/35 to-transparent" role="img" aria-label="Article cover"></div>
+          <time class="mt-4 block text-xs font-medium text-brand" datetime="2026-02-18">February 18, 2026</time>
+          <h2 class="mt-2 text-lg font-semibold text-[var(--color-text)] group-hover:text-brand transition-colors">
+            <a href="#">Digital transformation without disruption theater</a>
+          </h2>
+          <p class="mt-2 text-sm text-muted">Pragmatic modernization for established enterprises.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section-padding bg-[var(--color-bg-elevated)]">
+      <div class="container-narrow text-center" id="blog-newsletter"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { renderNewsletter } from './assets/js/components.js';
+    document.getElementById('blog-newsletter').innerHTML = renderNewsletter();
+  </script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/animations.js"></script>
+  <script type="module" src="assets/js/forms.js"></script>
+</body>
+</html>

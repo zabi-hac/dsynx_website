@@ -1,0 +1,13 @@
+{
+  "name": "dsynz-website",
+  "version": "1.0.0",
+  "description": "DSYNZ — Strategy-led technology partner",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
+    "build": "npm run build:css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

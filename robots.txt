@@ -1,0 +1,8 @@
+# DSYNZ — https://dsynz.com
+User-agent: *
+Allow: /
+
+Sitemap: https://dsynz.com/sitemap.xml
+
+# Block non-content paths if added later
+Disallow: /components/

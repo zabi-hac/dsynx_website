@@ -1,0 +1,17 @@
+{
+  "name": "DSYNZ",
+  "short_name": "DSYNZ",
+  "description": "Strategy-led technology partner for growing businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#7C3AED",
+  "icons": [
+    {
+      "src": "/assets/favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

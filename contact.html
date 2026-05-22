@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-page="contact"
+  data-page-title="Contact — DSYNZ"
+  data-page-description="Contact DSYNZ to start your next software, AI, or digital transformation project."
+  data-page-url="https://dsynz.com/contact.html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — DSYNZ</title>
+  <meta name="description" content="Contact DSYNZ to start your next software, AI, or digital transformation project." />
+  <link rel="canonical" href="https://dsynz.com/contact.html" />
+  <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/theme-init.js"></script>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <div id="site-loader"></div>
+  <div id="site-nav"></div>
+  <main id="main" class="pt-[var(--nav-height)]">
+    <section class="section-padding">
+      <div class="container-wide grid gap-16 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h1 class="heading-section mt-3 text-[var(--color-text)]">Let's design your next advantage</h1>
+          <p class="mt-4 text-lg text-muted">Tell us where you are and where you want to be. We respond within one business day.</p>
+          <div class="mt-10 space-y-4 text-sm">
+            <p><span class="font-semibold text-[var(--color-text)]">Email</span><br /><a href="mailto:hello@dsynz.com" class="text-brand hover:underline">hello@dsynz.com</a></p>
+            <p><span class="font-semibold text-[var(--color-text)]">Phone</span><br /><a href="tel:+15550000000" class="text-muted hover:text-brand">+1 (555) 000-0000</a></p>
+          </div>
+        </div>
+        <div class="card reveal" id="contact-form-wrap"></div>
+      </div>
+    </section>
+    <section class="section-padding bg-[var(--color-bg-elevated)]">
+      <div class="container-narrow text-center" id="newsletter-section"></div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script type="module">
+    import { renderContactForm, renderNewsletter } from './assets/js/components.js';
+    document.getElementById('contact-form-wrap').innerHTML = renderContactForm();
+    document.getElementById('newsletter-section').innerHTML = renderNewsletter();
+  </script>
+  <script type="module" src="assets/js/main.js"></script>
+  <script type="module" src="assets/js/animations.js"></script>
+  <script type="module" src="assets/js/forms.js"></script>
+</body>
+</html>
